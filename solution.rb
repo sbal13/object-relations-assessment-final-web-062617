@@ -3,7 +3,7 @@
 
 class Rating
 
-	@@all
+	@@all = []
 
 	# include ActiveMini::BasicInstanceMethods
 	# extend ActiveMini::BasicClassMethods
@@ -31,7 +31,7 @@ class Viewer
 	# extend ActiveMini::BasicClassMethods
 	# extend ActiveMini::AnalysisClassMethods
 
-	@@all
+	@@all = []
 
 	attr_accessor :first_name, :last_name
 
@@ -117,7 +117,7 @@ end
 
 class Movie
 
-	@@all
+	@@all =[]
 
 
 	# include ActiveMini::BasicInstanceMethods
