@@ -56,7 +56,7 @@ class Viewer
    	end
 
    	def ratings
-   		Rating.all.select{|rating| rating.viewer = self}
+   		Rating.all.select{|rating| rating.viewer == self}
    	end
 
 
@@ -94,7 +94,7 @@ class Viewer
     end
 
     def self.find_by_name(target_name)
-    	self.find_by(name: target_name)
+    	self.all.find{|viewer| viewer.name == target_name}
     end
 
     def self.sort_by_num_ratings
@@ -172,7 +172,7 @@ class Movie
 	end
 
 	def self.find_by_title(target_title)
-		self.find_by(title: target_title)
+		self.all.find{|movie| movie.title == target_title)
 	end
 
 end
